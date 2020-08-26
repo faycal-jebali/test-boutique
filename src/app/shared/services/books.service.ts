@@ -11,13 +11,13 @@ const pathBack = 'http://henri-potier.xebia.fr/';
 
 
 export class BooksService {
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   getBooks() {
-    return this.http.get<Book[]>(`${pathBack}books`);
+    return this.httpClient.get<Book[]>(`${pathBack}books`);
   }
 
   getCommercialOffers(listIsbn: string) {
-    return this.http.get<Book>(`${pathBack}books/${listIsbn}/commercialOffers`);
+    return this.httpClient.get<Book>(`${pathBack}books/${listIsbn}/commercialOffers`);
   }
 }

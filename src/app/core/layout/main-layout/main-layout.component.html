@@ -1,15 +1,13 @@
 <mat-toolbar color="primary">
     Henri Potier
-
     <span class="spacer"></span>
-
     <button mat-flat-button color="primary" [routerLink]="['/home']" routerLinkActive="active">Accueil</button>
     <button mat-flat-button color="primary" [routerLink]="['/cart']" routerLinkActive="active">Cart</button>
     <div class="col-lg-4 col-sm-6 col-12">
         <div class="widgets-wrap float-md-right">
             <div class="widget-header mr-3 d-inline-block">
                 <a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></a>
-                <span class="badge badge-pill badge-danger notify">0</span>
+                <span class="badge badge-pill badge-danger notify">{{ cart?.length }}</span>
             </div>
         </div>
     </div>

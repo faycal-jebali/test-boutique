@@ -1,12 +1,13 @@
-import { CommonModule } from '@angular/common';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
+import { SharedModule } from '../../shared/shared.module';
 import { CartRoutingModule } from './cart-routing.module';
 import { CartComponent } from './cart.component';
 
+
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     CartRoutingModule,
   ],
   declarations: [CartComponent],
